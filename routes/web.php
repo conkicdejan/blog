@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'Dejan';
+    $lastname = 'Conkic';
+    return view('welcome', compact('name', 'lastname'));
+});
+
+Route::get('/about-us', function() {
+    $name = 'Dejan';
+    $lastname = 'Conkic';
+    return view('about-us', compact('name', 'lastname'));
 });

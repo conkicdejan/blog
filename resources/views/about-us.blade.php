@@ -21,6 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1> Hello {{ "$name $lastname" }}</h1>
+        <h1> About {{ "$name $lastname" }}</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel quo reprehenderit consequuntur qui ad eos dignissimos facilis pariatur fuga dolore, blanditiis repudiandae corrupti enim ducimus voluptate dicta! Beatae, accusamus?</p>
     </body>
 </html>
