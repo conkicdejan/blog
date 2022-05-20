@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $name = 'Dejan';
+    $name = 'Pera';
     $lastname = 'Conkic';
     return view('welcome', compact('name', 'lastname'));
 });
@@ -23,4 +24,14 @@ Route::get('/about-us', function() {
     $name = 'Dejan';
     $lastname = 'Conkic';
     return view('about-us', compact('name', 'lastname'));
+});
+
+Route::get('/posts', function() {
+    $posts = Post::all();
+    return view('posts', compact('posts'));
+});
+
+Route::get('/posts/{id}', function($id) {
+    $post = Post::find($id);
+    return view('post', compact('post'));
 });
